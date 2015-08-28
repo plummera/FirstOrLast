@@ -1,0 +1,35 @@
+/* CSS 4 DayZ! */
+
+#header {
+  background-color: red;
+  background-image: none;
+}
+
+#main-wrapper {
+  background: black;
+}
+
+body {
+  color: white;
+}
+
+a {
+  color: green;
+}
+
+.node-teaser h2 a {
+  color:red;
+}
+
+h1 {
+  color: white;
+}
+
+table tr th {
+  background: purple;
+}
+
+tr td {
+  background: white;
+  border: 2px solid #000;
+}

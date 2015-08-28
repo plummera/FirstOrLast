@@ -1,0 +1,4 @@
+; $Id$
+name = "Anthony's Module"
+description = "Does something that an Anthony module would do."
+core = 7.x 

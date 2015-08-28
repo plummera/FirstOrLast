@@ -1,5 +1,5 @@
-name = Bartik Sub
-description = A Sub Theme based off the Bartik Theme
+name = FireBall Theme v1.0 by Anthony
+description = A custom theme so is so hot its fire
 core = 7.x
 
 base theme = bartik
@@ -8,6 +8,9 @@ base theme = bartik
 stylesheets[all][] = assets/css/custom.css
 stylesheets[print][] = assets/css/print.css
 stylesheets[screen and (max-width: 600px)][] = assets/css/media.css
+stylesheets[bootstrap-theme] [] = assets/css/bootstrap-theme.css
+stylesheets[bootstrap-theme-min] [] = assets/css/bootstrap-theme.min.css
+stylesheets[bootstrap] [] = assets/css/bootstrap.min.css
 
 regions[header] = Header
 regions[help] = Help
@@ -34,6 +37,6 @@ settings[shortcut_module_link] = 0
 
 
 ; Information added by Drupal.org packaging script on 2015-06-17
-version = "7.38"
+version = "7.39"
 project = "drupal"
 datestamp = "1434567286"

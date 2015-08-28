@@ -1,0 +1,62 @@
+<?php
+// $Id$
+
+/**
+ * @file
+ * Anthony's Module.
+ *
+ * This is a simple module designed for awesomeness.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function anthony_menu() {
+  $items = array();
+  $items['trade'] = array(
+    'title' => 'The Function of Anthony',
+    'page callback' => 'anthony_page',
+    'access arguments' => array('view content')
+    );
+  return $items;
+}
+
+/**
+ * Build a form containing:
+ *   (1) a space to input stuff
+ *   (2) a submit ("Convert") button.
+ */
+function anthony_form($form, &$form_state) {
+  $form['anthony'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Item'),
+    '#size' =>  22,
+    '#maxlength' => 50,
+    '#description' => t('What would you like trade?')
+  );
+
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Trade'),
+  );
+
+  return $form;
+}
+
+/**
+ * Present a page containing the form. This function was called
+ * in the anthony_menu() function.
+ */
+function anthony_page() {
+  return drupal_get_form('anthony_form');
+}
+
+/**
+ * Deliver the results of the calculation in Drupal's "message" area.
+ */
+function anthony_submit($form, &$form_state) {
+  $output = (
+    $form_state['values']['trade'] . ' can be trade in the amount of $3.50.'
+  );
+  drupal_set_message(t($output), 'error');
+}
